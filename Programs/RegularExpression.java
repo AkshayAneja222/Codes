@@ -1,7 +1,11 @@
+package Programs;
 import java.util.*;
   import java.io.*;
 
-  public class test2 {
+  //Check if pattern is equal to string or not.
+  //eq  a*b?f == asbqf
+  
+  public class RegularExpression {
 
   
   public static boolean checkPattern(String str, String ptr)

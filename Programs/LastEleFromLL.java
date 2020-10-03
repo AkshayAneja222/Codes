@@ -1,3 +1,4 @@
+package Programs;
 class linkNode{
 	int data;
 	linkNode next;

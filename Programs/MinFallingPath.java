@@ -1,6 +1,8 @@
+package Programs;
+
 import java.util.*;
 
-class test
+class MinFallingPath
  {
 	
     public int minFallingPathSum(int[][] a) {
@@ -47,6 +49,6 @@ class test
 	 {
     	int[][] arr = {{1,2,3},{4,5,6},{7,8,9}};
     	
-    	System.out.println(new test().minFallingPathSum(arr));
+    	System.out.println(new MinFallingPath().minFallingPathSum(arr));
 	 }
 }
