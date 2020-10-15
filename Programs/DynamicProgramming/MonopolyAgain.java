@@ -24,14 +24,32 @@ import java.util.Scanner;
 
 public class MonopolyAgain {
 	
+	public static int getMoney(int[] arr, int start, int end, int[][] dp, int m)
+	{
+		if(start+1==end)
+			return Math.max(arr[start], arr[end]);
+		
+		int val1 = 0, val2 = 0;
+		int prev1 = 0, prev2 = 0;
+		
+		for(int i=start; i<Math.min(end, 2*m); i++)
+		{
+			prev1+=arr[i];
+			for(int j=end ;i>Math.max(i+1, 2*m); j++)
+			val1 = prev1+ Math.min(getMoney(arr, i+2, j, dp, Math.max(i, m)), getMoney(arr, i+2, j, dp, Math.max(i, m)));
+		}
+		
+		return 0;
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
 		
-		int[] arr = new int[num];
+		long[] arr = new long[num];
 		
 		for(int i=0;i<num;i++)
-			arr[i]=sc.nextInt();
+			arr[i]=sc.nextLong();
 		
 		
 		
