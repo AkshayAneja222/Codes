@@ -23,7 +23,7 @@ public class EfiicientIsPrime {
 	}
 	
 	 
-	// all the primes that are less than that gievn number 
+	// all the primes that are less than that given number 
 	static void allPrimeLessThanN(int n){
 		
 		boolean[] prime = new boolean[n+1];

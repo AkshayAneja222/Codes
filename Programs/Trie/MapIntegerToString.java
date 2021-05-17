@@ -17,7 +17,7 @@ class TrieUsingHashMap {
 		int value = 0;
 	}
 
-	void insert(String str, int value)
+	public void insert(String str, int value)
 	{
 		int strLength = str.length(), strIndex;
 		TrieNode node = root;
@@ -35,7 +35,7 @@ class TrieUsingHashMap {
 		node.end=true;
 		node.value = value;
 	}
-	
+
 	long sumOfAllPrefixes(String str)
 	{
 		recurseTrie(search(str));
@@ -43,7 +43,7 @@ class TrieUsingHashMap {
 		answer=0;
 		return val;
 	}
-	
+
 	void recurseTrie(TrieNode root)
 	{
 		if(root==null) return;
@@ -56,7 +56,7 @@ class TrieUsingHashMap {
 		}
 		return;
 	}
-	
+
 	TrieNode search(String str)
 	{
 		int strIndex, strLen = str.length();
@@ -66,7 +66,7 @@ class TrieUsingHashMap {
 		{
 			char c = str.charAt(strIndex);
 			if(!node.children.containsKey(c))
-			return null;
+				return null;
 			node = node.children.get(c);
 		}
 		return node;
